@@ -44,7 +44,7 @@ Here is a list of the main changes compared to Charles McNamara's version:
 * Changed the memoir option from twosided to onesided
 * Added list of figures and list of tables
 
-#LaTeX and "Should I use this?" (by Charles McNamara)
+# LaTeX and "Should I use this?" (by Charles McNamara)
 
 ## What is LaTeX? Why should I use it to write my dissertation?
 
