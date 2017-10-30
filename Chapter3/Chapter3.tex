@@ -1,16 +1,68 @@
 %This is the third chapter of the dissertation
 
-%The following command starts your chapter. If you want different titles used in your ToC and at the top of the page throughout the chapter, you can specify those values here. Since Columbia doesn't want extra information in the headers and footers, the "Top of Page Title" value won't actually appear.
+\begin{comment} %This environment allows to compile individual chapters with minimal effort.
+%This comment environment has to be active for compiling the dissertation file and inactive to compile this individual chapter.
+%Just comment out begin and end comment at the beginning and end of the document as well as uncomment the begin and end comment around the chapter title to compile this chapter.
 
-\chapter[Table of Contents Title][Top of Page Title]{Title of Chapter 3}
+	\documentclass[12pt,letterpaper,oneside]{article}
+
+	%.........................
+	%%INCLUDE HERE all packages that you are using in your Dissertation.
+	\usepackage{verbatim} % For long comments. Needed if you want to set the documents up so that you can easily compile individual tex files.
+	\usepackage{graphicx} %Allows including images
+	\usepackage[space]{grffile} %To allow your path to contain spaces (I had everything on my Google Drive)
+	\usepackage{booktabs} %For nice lines in tables
+	\usepackage{longtable} %For using tables that are longer than one page
+	\usepackage{float} %to have "stuff" figures, footnote etc where it should be
+	\usepackage{rotating} %For rotating things such as tables (e.g. sidewaystable environment)
+	\usepackage{enumitem} % To fix spacing of bullet point lists
+	\setlist{noitemsep} %removes space between items
+	%\usepackage{afterpage} %might be useful if you run into spacing problems
+	%\usepackage[labelfont={bf},font={small}]{caption} %Adjusting table and figure captions the way I prefer them
+	\usepackage[hidelinks, plainpages=false, pdfpagelabels]{hyperref} % Use if you want hyperlinks (e.g. in your table of contents). If you don't want them to be blue use the option "hidelinks".
+	%hperref sometimes has compatibility issues with other packages, which can often be solved by loading hyperref last. Otherwise more warnings appear about destinations with same identifier.
+
+	\newcommand{\totalN}{10,000 } %An important number that you can use in the text
+%.........................
+
+	%Some packages and options that are specific to the individual chapter file
+	\graphicspath{{"../Figures//"}} %This has to be here different than in the main dissertation file. Except if you actually use the complete path.
+	\usepackage{setspace} %Setting spacing in individual chapter document
+	\doublespacing %For double spacing in the individual chapter document
+	\usepackage[margin=1.2in]{geometry} %Setting margins in individual chapter document
+
+	\title{Chapter 3 Title}
+	\author{your name}
+	\date{Version: \today}
+
+	\begin{document}
+	\maketitle
+	%\tableofcontents
+\end{comment}
+
+%---------------------------------------------------------------
+%\begin{comment}
+%This comment environment has to be inactive for compiling the dissertation file and active to compile individual chapter.
+	\chapter{This is the title of the third chapter}
+	\newpage
+%\end{comment}
+
+%---------------------------------------------------------------
+
+\section{Introduction}
 
 Here you can write some introductory remarks about your chapter.
 I like to give each sentence its own line.
 
 When you need a new paragraph, just skip an extra line.
 
-\section*{New Section}
 
-By using the asterisk to start a new section, I keep the section from appearing in the table of contents.
-If you want your sections to be numbered and to appear in the table of contents, remove the asterisk.
+%---------------------------------------------------------------
+\begin{comment}
+%This comment environment has to be active for compiling the dissertation file and inactive to compile individual chapter.
+	\bibliographystyle{apalike}
+	\bibliography{../Bib_temp}{}
 
+	\end{document}
+\end{comment}
+%---------------------------------------------------------------
