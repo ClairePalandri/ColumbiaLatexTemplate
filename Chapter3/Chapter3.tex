@@ -16,6 +16,7 @@
 	\usepackage{float} %to have "stuff" figures, footnote etc where it should be
 	\usepackage{rotating} %For rotating things such as tables (e.g. sidewaystable environment)
 	\usepackage{enumitem} % To fix spacing of bullet point lists
+	\usepackage{appendix}
 	\setlist{noitemsep} %removes space between items
 	%\usepackage{afterpage} %might be useful if you run into spacing problems
 	%\usepackage[labelfont={bf},font={small}]{caption} %Adjusting table and figure captions the way I prefer them
@@ -62,6 +63,11 @@ When you need a new paragraph, just skip an extra line.
 %This comment environment has to be active for compiling the dissertation file and inactive to compile individual chapter.
 	\bibliographystyle{apalike}
 	\bibliography{../Bib_temp}{}
+
+	\begin{appendices}
+	  \chapter{Appendix to Chapter 3}
+	  \include{Appendix3}
+	\end{appendices}
 
 	\end{document}
 \end{comment}

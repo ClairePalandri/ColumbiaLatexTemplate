@@ -21,6 +21,7 @@
 \usepackage{float} %to have "stuff" figures, footnote etc where it should be
 \usepackage{rotating} %For rotating things such as tables (e.g. sidewaystable environment)
 \usepackage{enumitem} % To fix spacing of bullet point lists
+\usepackage{appendix}
 \setlist{noitemsep} %removes space between items
 %\usepackage{afterpage} %might be useful if you run into spacing problems
 %\usepackage[labelfont={bf},font={small}]{caption} %Adjusting table and figure captions the way I prefer them
@@ -118,8 +119,20 @@
 %This uses subdirectories for each part of the dissertation just to keep the files tidy. LaTeX generates a lot of different files for output, and using subdirectories allows you to find your .tex files more easily.
 \include{./Introduction/Introduction}
 \include{./Chapter1/Chapter1}
+\begin{appendices}
+  \chapter{Appendix to Chapter 1}
+  \include{./Chapter1/Appendix1}
+\end{appendices}
 \include{./Chapter2/Chapter2}
+\begin{appendices}
+  \chapter{Appendix to Chapter 2}
+  \include{./Chapter2/Appendix2}
+\end{appendices}
 \include{./Chapter3/Chapter3}
+\begin{appendices}
+  \chapter{Appendix to Chapter 3}
+  \include{./Chapter3/Appendix3}
+\end{appendices}
 \include{./Conclusion/Conclusion}
 
 
